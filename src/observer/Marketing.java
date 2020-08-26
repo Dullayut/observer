@@ -4,15 +4,18 @@
  */
 package observer;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  *
- * @author sarun
+ * @author 
  */
-public class Marketing implements MyObserver {
+public class Marketing implements Observer {
     @Override
-    public void update(Source o) {
+    public void update(Observable o, Object arg) {
         System.out.println(
-	 "(marketing) headquater is updated to " 
+	 arg + "(marketing) headquater is updated to " 
                 + ((HeadQuater)o).getSomeData());
     }
 }
